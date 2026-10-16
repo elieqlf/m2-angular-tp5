@@ -1,0 +1,19 @@
+<p><strong>Détail de l'activité :</strong></p>
+<ol>
+  <li>
+    Nom de l'activité :
+    @if (modif) {
+      <input type="text" [(ngModel)]="nom">
+    } @else {
+      <strong>{{ nom }}</strong>
+    }
+  </li>
+</ol>
+
+<button (click)="supprimeElem(index)">Supprimer</button>
+@if (modif) {
+  <button (click)="sauvegarde()">Sauvegarder</button>
+} @else {
+  <button (click)="modif = true">Modifier</button>
+  <button (click)="retour()">Retour</button>
+}
